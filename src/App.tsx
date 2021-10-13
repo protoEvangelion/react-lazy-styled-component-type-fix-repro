@@ -1,8 +1,17 @@
+import { lazy } from "react";
 import "./App.css";
-import { Button } from "./reexport";
+
+const Button = lazy(() => import("./Button"));
+const StyledButton = lazy(() => import("./StyledButton"));
 
 function App() {
-  return <Button colorz="red" />;
+  return (
+    <>
+      <Button color={1234} />
+
+      <StyledButton color={1234} />
+    </>
+  );
 }
 
 export default App;
