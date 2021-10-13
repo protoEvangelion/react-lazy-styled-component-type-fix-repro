@@ -1,0 +1,15 @@
+diff --git a/node_modules/@types/react/index.d.ts b/node_modules/@types/react/index.d.ts
+index 97bf8d2..7072f0c 100755
+--- a/node_modules/@types/react/index.d.ts
++++ b/node_modules/@types/react/index.d.ts
+@@ -867,8 +867,8 @@ declare namespace React {
+         readonly _result: T;
+     };
+ 
+-    function lazy<T extends ComponentType<any>>(
+-        factory: () => Promise<{ default: T }>
++    function lazy<T>(
++        factory: () => Promise<{ default: ComponentType<T> }>
+     ): LazyExoticComponent<T>;
+ 
+     //
